@@ -1,0 +1,43 @@
+.gfContainer {
+    border-bottom:1px black solid;
+    position:absolute;
+    border-left: 1px black solid;
+    right:0px;
+}
+.gfLabel {
+    font-size: 12px;
+    height:15px;
+    position:absolute;
+    text-align:center;
+}
+.gfBar {
+    bottom : 0px;
+    position : absolute;
+}
+.gfLegendLabel {
+    height : 20px;
+    width : 80px;
+    padding-left :5px;
+    overflow : hidden;
+}
+.gfLegendColorBox {
+    height : 20px;
+    width : 20px;
+    float : left;
+}
+.gfLegendItem {
+    height : 20px;
+    width : 105px;
+    margin-top : 20px;
+    margin-left : 4px;
+    float : left;
+}
+.gfYAxisLabel {
+    height : 20 px;
+    right : 1px;
+    position : absolute;
+    overflow : hidden;
+    text-align : right;
+    padding-right : 2px;
+    font-size : 12px;
+}

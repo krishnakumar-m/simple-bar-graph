@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/graph.css" rel="stylesheet">
+    <script src="js/graph.js"></script>
+  </head>
+<script>
+
+
+
+window.onerror = function(a, b, c) {
+    alert(a + " " + b + " " + c);
+};
+
+function test(){
+graphIt.init({
+    width: 200,
+    height: 200,
+    totalWidth: 220,
+    totalHeight: 250,
+    colors : ['green','black']
+});
+
+graphIt.setData([{
+    id: 1991,
+    score: 100,
+    percent: 150
+}, {
+    id: 1995,
+    score: 239,
+    percent: 120
+}, {
+    id: 1999,
+    score: 200,
+    percent: 120
+}]);
+
+graphIt.setXLabel('id');
+
+document.body.appendChild(graphIt.chart());
+
+}
+
+function path() {
+var cvs = document.getElementById('tree');
+var ctx = cvs.getContext('2d');
+var x = cvs.width/2;
+
+var y=0;
+var dx = 0, dy = 5;
+
+for(i=5;i>0;i--) {
+ctx.beginPath();
+ctx.moveTo(x,y);
+y+=Math.ceil(Math.random()*20+i);
+rand = Math.random();
+dx = (rand<0.25)?-5:((rand>0.75)?5:0);
+x+=dx;
+ctx.lineWidth = i;
+ctx.lineCap = 'round';
+ctx.strokeStyle = 'black';
+ctx.lineTo(x,y);
+ctx.stroke();
+//ctx.fillStyle = 'black';
+//ctx.arc(x,y,i,0,2*Math.PI);
+//ctx.fill();
+}
+
+}
+
+</script>
+
+
+  <body onload="test();">
+
+    <canvas id='tree' width='150px' height='150px'></canvas>
+<br/>
+
+
+  </body>
+</html>		
