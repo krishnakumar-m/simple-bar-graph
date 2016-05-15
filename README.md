@@ -12,11 +12,11 @@ Now the javascript stuff.
 
 //Init chart properties
 graphIt.init({
-    width: 200,
-    height: 200,
-    totalWidth: 220,
-    totalHeight: 250,
-    colors : ['green','black']
+    width: 200, // width of the graph
+    height: 200, // height of the graph
+    totalWidth: 220, // total width and height including
+    totalHeight: 250, // legends and axes
+    colors : ['green','black'] // colors of bars
 });
 
 // Set the data
